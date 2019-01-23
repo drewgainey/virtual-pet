@@ -27,8 +27,7 @@ public class VirtualPetApp {
 						+ "               |:  ::::.       ::' \r\n                   |:  ::::::    ,::' ");
 		System.out.println("Hello " + name);
 		Pet myPet = new Pet(50, 50, 50, 50, 50);
-		int i = 0; // There must be a better way to do this
-		while (i == 0) {
+		while (true) {
 			System.out.println("Here is " + name + "'s current need levels");
 			System.out.println("Thirst:" + myPet.getThirst());
 			System.out.println("Hunger:" + myPet.getHunger());

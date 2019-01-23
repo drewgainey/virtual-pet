@@ -90,6 +90,7 @@ public class VirtualPetTest {
 		assertEquals(60, hunger);
 		assertEquals(60, thirst);
 	}
+
 	@Test
 	public void shouldDecreaseThirstWithDrink() {
 		Pet underTest = new Pet(50, 50, 50, 50, 50);
@@ -97,6 +98,7 @@ public class VirtualPetTest {
 		int thirst = underTest.getThirst();
 		assertEquals(0, thirst);
 	}
+
 	@Test
 	public void shouldDecreaseWasteWithBathroom() {
 		Pet underTest = new Pet(50, 50, 50, 50, 50);
@@ -104,4 +106,14 @@ public class VirtualPetTest {
 		int waste = underTest.getWaste();
 		assertEquals(0, waste);
 	}
-}
+
+	@Test
+	public void shouldRefusePlayWhenEnergyIs100() {
+		Pet underTest = new Pet (50,50,50,50, 100);
+		underTest.play();
+		int boredom = underTest.getBoredom();
+		assertEquals(50,boredom); 
+		}
+	
+	}
+
